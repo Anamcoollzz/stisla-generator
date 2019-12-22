@@ -13,4 +13,9 @@ class Projek extends Model
     {
     	return $this->hasMany('App\Modul', 'projek_id');
     }
+
+    public function menu()
+    {
+    	return $this->hasMany('App\Menu', 'projek_id');
+    }
 }

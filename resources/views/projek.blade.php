@@ -51,6 +51,7 @@
                                 <td>{{ $d->path }}</td>
                                 <td>
                                     <a href="{{ route('modul', [$d->id]) }}" class="btn btn-primary">Lihat Modul</a>
+                                    <a href="{{ route('menu', [$d->id]) }}" class="btn btn-success">Menu</a>
                                     <a href="{{ route('projek.hapus', [$d->id]) }}" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>

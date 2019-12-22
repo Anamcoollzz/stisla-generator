@@ -9,20 +9,32 @@
     <meta name="base-url" content="{{ url('/') }}" id="base-url">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
+    {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" /> --}}
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script> --}}
 
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .bg-biru {
+            background-color: #567EC1;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .bg-orange {
+            background-color: #C19C56;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

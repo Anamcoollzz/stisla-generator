@@ -1,22 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Generator</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <generator :modul="{{$modul->toJson()}}"></generator>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="row justify-content-center" style="padding: 30px;">
+    <generator :modul="{{$modul->toJson()}}" :modul-lainnya="{{ $modul_lainnya->toJson() }}"></generator>
 </div>
 @endsection

@@ -33,6 +33,7 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['X-CSRF-TOKEN'] = $('[name="csrf-token"]').attr('content');
 window.axios.defaults.baseURL = document.getElementById('base-url').content;
 
 /**

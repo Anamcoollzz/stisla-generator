@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace AppNAMESPACE_MODEL;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Contoh extends Model
+class NAMA_MODEL extends Model
 {
 
 	// nama tabel di basisdata

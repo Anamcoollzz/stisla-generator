@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Modul extends Model
+class Menu extends Model
 {
-    protected $table = 'modul';
-    protected $fillable = ['nama', 'projek_id', 'controller', 'model', 'views', 'migration', 'tabel', 'seeder', 'ikon'];
+    protected $table = 'menu';
+    protected $fillable = ['nama', 'projek_id', 'ikon', 'route', 'is_blank', 'parent_id'];
     public $timestamps = false;
     public function projek()
     {
@@ -17,8 +17,8 @@ class Modul extends Model
     {
     	return $this->hasMany('App\Kolom', 'modul_id');
     }
-    public function grup()
+    public function sub()
     {
-    	return $this->hasMany('App\Grup', 'modul_id');
+        return $this->hasMany('App\Menu', 'parent_id');
     }
 }

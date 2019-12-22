@@ -54,4 +54,13 @@ class ProjekController extends Controller
     	$modul->delete();
     	return redirect()->back()->with('status', 'Modul berhasil dihapus');
     }
+
+    public function menu(Projek $projek)
+    {
+    	return view('menu', [
+    		'menu'		=> $projek->menu()->whereNull('parent_id')->with('sub')->get(),
+    		'projek'	=> $projek,
+    		'active'	=> null,
+    	]);
+    }
 }
