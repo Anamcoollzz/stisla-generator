@@ -245,151 +245,10 @@
                         </div>
                     </div>
                     <template v-for="(kol, i) in grup.kolom">
-                        <div :class="'row '+(i % 2 ? 'bg-biru' : 'bg-orange')">
-                            <template v-if="kol.sembunyikan">
-                                <div class="col-md-12">
-                                    <button class="btn btn-primary btn-sm" @click.prevent="perlihatkan(grup.kolom[i])">Perlihatkan</button>
-                                </div>
-                            </template>
-                            <template v-else>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label for="">Kolom {{ i+1 }} [view]</label>
-                                        <input @keyup="setNama(grup.kolom[i])" type="text" class="form-control" v-model="grup.kolom[i].nama_asli">
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label for="">Kolom {{ i+1 }} [basisdata]</label>
-                                        <input @keyup="resetUniqueExists(grup.kolom[i])" type="text" class="form-control" v-model="grup.kolom[i].nama">
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label for="">Tipe {{ i+1 }}</label>
-                                        <select @change="onChangeTipe(grup.kolom[i])" v-model="grup.kolom[i].tipe" class="form-control">
-                                            <option v-for="t in tipe" :value="t.value">{{ t.text }}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <template v-if="isForeignType(grup.kolom[i].tipe)">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="">Modul Parent</label>
-                                            <select name="" id="" class="form-control" v-model="grup.kolom[i].modul_parent">
-                                                <option v-for="mm in modulLainnya" :value="mm.id">{{ mm.nama }}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="">Pilih Kolom Primary</label>
-                                            <select name="" id="" class="form-control" v-model="grup.kolom[i].kolom_parent">
-                                                <option v-for="km in kolomParent(modulLainnya, grup.kolom[i].modul_parent)" :value="km.nama">{{ km.nama }}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="">Pilih Kolom View (Select)</label>
-                                            <select name="" id="" class="form-control" v-model="grup.kolom[i].kolom_view">
-                                                <option v-for="km in kolomParent(modulLainnya, grup.kolom[i].modul_parent)" :value="km.nama">{{ km.nama }}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </template>
-                                <template v-else-if="bukanPrimary(grup.kolom[i].tipe)">
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label for="">Panjang {{ i+1 }}</label>
-                                            <input type="number" min="0" class="form-control" v-model="grup.kolom[i].panjang">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input @change="isUnique(grup.kolom[i])" class="mt-5" type="checkbox" v-model="grup.kolom[i].unique"> Unique
-                                        <input @change="isNullable(grup.kolom[i])" class="mt-5" type="checkbox" v-model="grup.kolom[i].nullable"> Nullable
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label for="">Faker {{ i+1 }}</label>
-                                            <select v-model="grup.kolom[i].faker" class="form-control">
-                                                <option value="name">name</option>
-                                                <option value="nik">nik</option>
-                                                <option value="email">email</option>
-                                                <option value="city">city</option>
-                                                <option value="phoneNumber">phoneNumber</option>
-                                                <option value="digit">digit</option>
-                                                <option value="jenisKelamin">jenisKelamin</option>
-                                                <option value="tanggalSekarang">tanggalSekarang</option>
-                                                <option value="address">address</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label for="">Ikon {{ i+1 }}</label>
-                                            <input type="text" class="form-control" v-model="grup.kolom[i].ikon">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label for="">Lebar Form {{ i+1 }}</label>
-                                            <select class="form-control" v-model="grup.kolom[i].kolom_bootstrap">
-                                                <option v-for="i in 12 " :value="'col-md-'+i">{{ 'col-md-'+i }}</option>
-                                                <option v-for="i in 12 " :value="'col-sm-'+i">{{ 'col-sm-'+i }}</option>
-                                                <option v-for="i in 12 " :value="'col-lg-'+i">{{ 'col-lg-'+i }}</option>
-                                                <option v-for="i in 12 " :value="'col-xs-'+i">{{ 'col-xs-'+i }}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label for="">Jenis Form {{ i+1 }}</label>
-                                            <select class="form-control" v-model="grup.kolom[i].jenis_form">
-                                                <option value="input">input [text]</option>
-                                                <option value="inputnumber">input [number]</option>
-                                                <option value="inputimage">input [image]</option>
-                                                <option value="select">select</option>
-                                                <option value="datepicker">datepicker</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12" align="center">
-                                        <h4 align="center">Validasi kolom {{ i+1 }}</h4>
-                                        <input @change="hapusNullable(grup.kolom[i])" type="checkbox" v-model="grup.kolom[i].rules" value="required"> required
-                                        <input @change="hapusRequired(grup.kolom[i])" type="checkbox" v-model="grup.kolom[i].rules" value="nullable"> nullable
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="email"> email
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="string"> string
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="numeric"> numeric
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="file"> file
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="mimes:jpeg,png"> image
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" value="date_format:Y-m-d"> date_format:Y-m-d
-                                        <br>
-
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" :value="'unique:'+grup.kolom[i].tabel_kolom"> unique
-                                        <input type="text" v-model="grup.kolom[i].tabel_kolom" @keyup="perbaruiUnik(grup.kolom[i])" @change="perbaruiUnik(grup.kolom[i])">
-
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" :value="'exists:'+grup.kolom[i].tabel_kolom"> exists
-                                        <input type="text" v-model="grup.kolom[i].tabel_kolom" @keyup="perbaruiUnik(grup.kolom[i], false)" @change="perbaruiUnik(grup.kolom[i], false)">
-
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" :value="'min:'+grup.kolom[i].min"> min
-                                        <input @keydown="hapusmin(grup.kolom[i])" type="number" min="0" v-model="grup.kolom[i].min">
-
-                                        <input type="checkbox" v-model="grup.kolom[i].rules" :value="'max:'+grup.kolom[i].max"> max
-                                        <input @keydown="hapusmax(grup.kolom[i])" type="number" min="0" v-model="grup.kolom[i].max">
-
-                                    </div>
-                                    <div class="col-md-12" align="center">
-                                        <br>
-                                        <button @click.prevent="grup.kolom.splice(i,1)" class="btn btn-danger btn-sm">Hapus</button>
-                                        <button @click.prevent="sisipkanKolom(i, grup.kolom)" class="btn btn-success btn-sm">Sisipkan Kolom</button>
-                                        <button @click.prevent="sembunyikan(grup.kolom[i])" class="btn btn-primary btn-sm">Sembunyikan</button>
-                                        <button @click.prevent="salin(grup.kolom, grup.kolom[i])" class="btn btn-info btn-sm">Salin</button>
-                                        <hr>
-                                    </div>
-                                </template>
-                            </template>
-                        </div>
+                        <kolom :tabel="tabel" :kolom="kol" :koloms="grup.kolom" :indeks="i" :modul-lainnya="modulLainnya" 
+                        @sembunyikan="sembunyikan" 
+                        @salin="salin" 
+                        @sisipkanKolom="sisipkanKolom"></kolom>
                     </template>
                     <button @click.prevent="tambahKolom(grup.kolom)" class="btn btn-success btn-block mb-4 mt-4">Tambah Kolom</button>
                 </div>
@@ -421,6 +280,7 @@
 
 <script>
     // import KolomBootstrapSelect from './KolomBootstrapSelect.vue'
+    import kolom from './Kolom.vue'
     import TIPE from './Tipe.vue'
     export default {
         data(){
@@ -643,7 +503,7 @@
                     nullable : false,
                 })
             },
-            sisipkanKolom(index, kolom){
+            sisipkanKolom([index, kolom]){
                 kolom.splice(index+1, 0, {
                     nama : '',
                     tipe : 'string',
@@ -750,7 +610,7 @@
                 if(kolom.rules.includes('nullable'))
                     kolom.rules.remove('required');
             },
-            salin(koloms, kolom){
+            salin([koloms, kolom]){
                 let kolomBaru = Object.assign({}, kolom)
                 koloms.push(kolomBaru)
             },
@@ -785,6 +645,9 @@
                 required : true,
             },
         },
+        components : {
+            kolom,
+        }
     }
 </script>
 

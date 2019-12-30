@@ -1838,150 +1838,18 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Tipe_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tipe.vue */ "./resources/js/components/Tipe.vue");
+/* harmony import */ var _Kolom_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Kolom.vue */ "./resources/js/components/Kolom.vue");
+/* harmony import */ var _Tipe_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tipe.vue */ "./resources/js/components/Tipe.vue");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 //
 //
 //
@@ -2264,6 +2132,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 //
 // import KolomBootstrapSelect from './KolomBootstrapSelect.vue'
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2304,7 +2173,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       max: 0,
       unique: 'tabel,kolom',
       exists: 'tabel,kolom',
-      tipe: _Tipe_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+      tipe: _Tipe_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
       grup_template: {
         nama: 'Grup Baru',
         sembunyikan: false,
@@ -2471,7 +2340,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         nullable: false
       });
     },
-    sisipkanKolom: function sisipkanKolom(index, kolom) {
+    sisipkanKolom: function sisipkanKolom(_ref) {
+      var _ref2 = _slicedToArray(_ref, 2),
+          index = _ref2[0],
+          kolom = _ref2[1];
+
       kolom.splice(index + 1, 0, {
         nama: '',
         tipe: 'string',
@@ -2585,7 +2458,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     hapusRequired: function hapusRequired(kolom) {
       if (kolom.rules.includes('nullable')) kolom.rules.remove('required');
     },
-    salin: function salin(koloms, kolom) {
+    salin: function salin(_ref3) {
+      var _ref4 = _slicedToArray(_ref3, 2),
+          koloms = _ref4[0],
+          kolom = _ref4[1];
+
       var kolomBaru = Object.assign({}, kolom);
       koloms.push(kolomBaru);
     },
@@ -2618,6 +2495,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       type: Array,
       required: true
     }
+  },
+  components: {
+    kolom: _Kolom_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -2828,6 +2708,224 @@ __webpack_require__.r(__webpack_exports__);
     projek: {
       type: Object,
       required: true
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Kolom.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Kolom.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Tipe_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Tipe.vue */ "./resources/js/components/Tipe.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      tipe: _Tipe_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    };
+  },
+  props: {
+    kolom: {
+      type: Object,
+      required: true
+    },
+    koloms: {
+      type: Array,
+      required: true
+    },
+    indeks: {
+      type: Number,
+      required: true
+    },
+    modulLainnya: {},
+    tabel: {}
+  },
+  methods: {
+    isForeignType: function isForeignType(tipe) {
+      var foreignArray = ['bigIntegerForeign', 'integerForeign', 'tinyIntegerForeign'];
+      return foreignArray.includes(tipe);
+    },
+    kolomParent: function kolomParent(modulParents, modulTerpilih) {
+      console.log(modulParents);
+      console.log(modulTerpilih);
+      var kolomModulLainnya = modulParents.filter(function (item) {
+        return item.id == modulTerpilih;
+      });
+      if (kolomModulLainnya.length > 0) return kolomModulLainnya[0].kolom;
+      return [];
+    },
+    setNama: function setNama(kolom) {
+      var nama_asli = this.titleCase(kolom.nama_asli.replace(/ /g, '_'));
+      kolom.nama = this.camelToSnake(nama_asli);
+      kolom.tabel_kolom = this.tabel + ',' + kolom.nama;
+    },
+    titleCase: function titleCase(str) {
+      var splitStr = str.toLowerCase().split(' ');
+
+      for (var i = 0; i < splitStr.length; i++) {
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+      }
+
+      return splitStr.join(' ');
+    },
+    camelToSnake: function camelToSnake(string) {
+      return string.replace(/[\w]([A-Z])/g, function (m) {
+        return m[0] + "_" + m[1];
+      }).toLowerCase();
     }
   }
 });
@@ -7453,7 +7551,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.barisku[data-v-b084b910]:nth-child(2){\n    background-color: #9F9F9F;\n}\n", ""]);
+exports.push([module.i, "\n.barisku[data-v-b084b910]:nth-child(2){\r\n    background-color: #9F9F9F;\n}\r\n", ""]);
 
 // exports
 
@@ -41178,2125 +41276,20 @@ var render = function() {
                     _vm._v(" "),
                     _vm._l(grup.kolom, function(kol, i) {
                       return [
-                        _c(
-                          "div",
-                          { class: "row " + (i % 2 ? "bg-biru" : "bg-orange") },
-                          [
-                            kol.sembunyikan
-                              ? [
-                                  _c("div", { staticClass: "col-md-12" }, [
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn btn-primary btn-sm",
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                            return _vm.perlihatkan(
-                                              grup.kolom[i]
-                                            )
-                                          }
-                                        }
-                                      },
-                                      [_vm._v("Perlihatkan")]
-                                    )
-                                  ])
-                                ]
-                              : [
-                                  _c("div", { staticClass: "col-sm-3" }, [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c("label", { attrs: { for: "" } }, [
-                                        _vm._v(
-                                          "Kolom " + _vm._s(i + 1) + " [view]"
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: grup.kolom[i].nama_asli,
-                                            expression:
-                                              "grup.kolom[i].nama_asli"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        attrs: { type: "text" },
-                                        domProps: {
-                                          value: grup.kolom[i].nama_asli
-                                        },
-                                        on: {
-                                          keyup: function($event) {
-                                            return _vm.setNama(grup.kolom[i])
-                                          },
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              grup.kolom[i],
-                                              "nama_asli",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-sm-3" }, [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c("label", { attrs: { for: "" } }, [
-                                        _vm._v(
-                                          "Kolom " +
-                                            _vm._s(i + 1) +
-                                            " [basisdata]"
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: grup.kolom[i].nama,
-                                            expression: "grup.kolom[i].nama"
-                                          }
-                                        ],
-                                        staticClass: "form-control",
-                                        attrs: { type: "text" },
-                                        domProps: { value: grup.kolom[i].nama },
-                                        on: {
-                                          keyup: function($event) {
-                                            return _vm.resetUniqueExists(
-                                              grup.kolom[i]
-                                            )
-                                          },
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              grup.kolom[i],
-                                              "nama",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      })
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-sm-3" }, [
-                                    _c("div", { staticClass: "form-group" }, [
-                                      _c("label", { attrs: { for: "" } }, [
-                                        _vm._v("Tipe " + _vm._s(i + 1))
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "select",
-                                        {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: grup.kolom[i].tipe,
-                                              expression: "grup.kolom[i].tipe"
-                                            }
-                                          ],
-                                          staticClass: "form-control",
-                                          on: {
-                                            change: [
-                                              function($event) {
-                                                var $$selectedVal = Array.prototype.filter
-                                                  .call(
-                                                    $event.target.options,
-                                                    function(o) {
-                                                      return o.selected
-                                                    }
-                                                  )
-                                                  .map(function(o) {
-                                                    var val =
-                                                      "_value" in o
-                                                        ? o._value
-                                                        : o.value
-                                                    return val
-                                                  })
-                                                _vm.$set(
-                                                  grup.kolom[i],
-                                                  "tipe",
-                                                  $event.target.multiple
-                                                    ? $$selectedVal
-                                                    : $$selectedVal[0]
-                                                )
-                                              },
-                                              function($event) {
-                                                return _vm.onChangeTipe(
-                                                  grup.kolom[i]
-                                                )
-                                              }
-                                            ]
-                                          }
-                                        },
-                                        _vm._l(_vm.tipe, function(t) {
-                                          return _c(
-                                            "option",
-                                            { domProps: { value: t.value } },
-                                            [_vm._v(_vm._s(t.text))]
-                                          )
-                                        }),
-                                        0
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _vm.isForeignType(grup.kolom[i].tipe)
-                                    ? [
-                                        _c("div", { staticClass: "col-md-3" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Modul Parent")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i]
-                                                          .modul_parent,
-                                                      expression:
-                                                        "grup.kolom[i].modul_parent"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: { name: "", id: "" },
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "modul_parent",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                _vm._l(
-                                                  _vm.modulLainnya,
-                                                  function(mm) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: mm.id
-                                                        }
-                                                      },
-                                                      [_vm._v(_vm._s(mm.nama))]
-                                                    )
-                                                  }
-                                                ),
-                                                0
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-md-3" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [_vm._v("Pilih Kolom Primary")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i]
-                                                          .kolom_parent,
-                                                      expression:
-                                                        "grup.kolom[i].kolom_parent"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: { name: "", id: "" },
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "kolom_parent",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                _vm._l(
-                                                  _vm.kolomParent(
-                                                    _vm.modulLainnya,
-                                                    grup.kolom[i].modul_parent
-                                                  ),
-                                                  function(km) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: km.nama
-                                                        }
-                                                      },
-                                                      [_vm._v(_vm._s(km.nama))]
-                                                    )
-                                                  }
-                                                ),
-                                                0
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-md-3" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Pilih Kolom View (Select)"
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i]
-                                                          .kolom_view,
-                                                      expression:
-                                                        "grup.kolom[i].kolom_view"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  attrs: { name: "", id: "" },
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "kolom_view",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                _vm._l(
-                                                  _vm.kolomParent(
-                                                    _vm.modulLainnya,
-                                                    grup.kolom[i].modul_parent
-                                                  ),
-                                                  function(km) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: km.nama
-                                                        }
-                                                      },
-                                                      [_vm._v(_vm._s(km.nama))]
-                                                    )
-                                                  }
-                                                ),
-                                                0
-                                              )
-                                            ]
-                                          )
-                                        ])
-                                      ]
-                                    : _vm.bukanPrimary(grup.kolom[i].tipe)
-                                    ? [
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Panjang " + _vm._s(i + 1)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value:
-                                                      grup.kolom[i].panjang,
-                                                    expression:
-                                                      "grup.kolom[i].panjang"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: {
-                                                  type: "number",
-                                                  min: "0"
-                                                },
-                                                domProps: {
-                                                  value: grup.kolom[i].panjang
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "panjang",
-                                                      $event.target.value
-                                                    )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: grup.kolom[i].unique,
-                                                expression:
-                                                  "grup.kolom[i].unique"
-                                              }
-                                            ],
-                                            staticClass: "mt-5",
-                                            attrs: { type: "checkbox" },
-                                            domProps: {
-                                              checked: Array.isArray(
-                                                grup.kolom[i].unique
-                                              )
-                                                ? _vm._i(
-                                                    grup.kolom[i].unique,
-                                                    null
-                                                  ) > -1
-                                                : grup.kolom[i].unique
-                                            },
-                                            on: {
-                                              change: [
-                                                function($event) {
-                                                  var $$a =
-                                                      grup.kolom[i].unique,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = null,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "unique",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "unique",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "unique",
-                                                      $$c
-                                                    )
-                                                  }
-                                                },
-                                                function($event) {
-                                                  return _vm.isUnique(
-                                                    grup.kolom[i]
-                                                  )
-                                                }
-                                              ]
-                                            }
-                                          }),
-                                          _vm._v(
-                                            " Unique\n                                    "
-                                          ),
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: grup.kolom[i].nullable,
-                                                expression:
-                                                  "grup.kolom[i].nullable"
-                                              }
-                                            ],
-                                            staticClass: "mt-5",
-                                            attrs: { type: "checkbox" },
-                                            domProps: {
-                                              checked: Array.isArray(
-                                                grup.kolom[i].nullable
-                                              )
-                                                ? _vm._i(
-                                                    grup.kolom[i].nullable,
-                                                    null
-                                                  ) > -1
-                                                : grup.kolom[i].nullable
-                                            },
-                                            on: {
-                                              change: [
-                                                function($event) {
-                                                  var $$a =
-                                                      grup.kolom[i].nullable,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = null,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "nullable",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "nullable",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "nullable",
-                                                      $$c
-                                                    )
-                                                  }
-                                                },
-                                                function($event) {
-                                                  return _vm.isNullable(
-                                                    grup.kolom[i]
-                                                  )
-                                                }
-                                              ]
-                                            }
-                                          }),
-                                          _vm._v(
-                                            " Nullable\n                                "
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Faker " + _vm._s(i + 1)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i].faker,
-                                                      expression:
-                                                        "grup.kolom[i].faker"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "faker",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "name" }
-                                                    },
-                                                    [_vm._v("name")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    { attrs: { value: "nik" } },
-                                                    [_vm._v("nik")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "email" }
-                                                    },
-                                                    [_vm._v("email")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "city" }
-                                                    },
-                                                    [_vm._v("city")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "phoneNumber"
-                                                      }
-                                                    },
-                                                    [_vm._v("phoneNumber")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "digit" }
-                                                    },
-                                                    [_vm._v("digit")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "jenisKelamin"
-                                                      }
-                                                    },
-                                                    [_vm._v("jenisKelamin")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "tanggalSekarang"
-                                                      }
-                                                    },
-                                                    [_vm._v("tanggalSekarang")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "address"
-                                                      }
-                                                    },
-                                                    [_vm._v("address")]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Ikon " + _vm._s(i + 1)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: grup.kolom[i].ikon,
-                                                    expression:
-                                                      "grup.kolom[i].ikon"
-                                                  }
-                                                ],
-                                                staticClass: "form-control",
-                                                attrs: { type: "text" },
-                                                domProps: {
-                                                  value: grup.kolom[i].ikon
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "ikon",
-                                                      $event.target.value
-                                                    )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Lebar Form " +
-                                                      _vm._s(i + 1)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i]
-                                                          .kolom_bootstrap,
-                                                      expression:
-                                                        "grup.kolom[i].kolom_bootstrap"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "kolom_bootstrap",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _vm._l(12, function(i) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: "col-md-" + i
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s("col-md-" + i)
-                                                        )
-                                                      ]
-                                                    )
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _vm._l(12, function(i) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: "col-sm-" + i
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s("col-sm-" + i)
-                                                        )
-                                                      ]
-                                                    )
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _vm._l(12, function(i) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: "col-lg-" + i
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s("col-lg-" + i)
-                                                        )
-                                                      ]
-                                                    )
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _vm._l(12, function(i) {
-                                                    return _c(
-                                                      "option",
-                                                      {
-                                                        domProps: {
-                                                          value: "col-xs-" + i
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s("col-xs-" + i)
-                                                        )
-                                                      ]
-                                                    )
-                                                  })
-                                                ],
-                                                2
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "col-sm-2" }, [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                { attrs: { for: "" } },
-                                                [
-                                                  _vm._v(
-                                                    "Jenis Form " +
-                                                      _vm._s(i + 1)
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "select",
-                                                {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        grup.kolom[i]
-                                                          .jenis_form,
-                                                      expression:
-                                                        "grup.kolom[i].jenis_form"
-                                                    }
-                                                  ],
-                                                  staticClass: "form-control",
-                                                  on: {
-                                                    change: function($event) {
-                                                      var $$selectedVal = Array.prototype.filter
-                                                        .call(
-                                                          $event.target.options,
-                                                          function(o) {
-                                                            return o.selected
-                                                          }
-                                                        )
-                                                        .map(function(o) {
-                                                          var val =
-                                                            "_value" in o
-                                                              ? o._value
-                                                              : o.value
-                                                          return val
-                                                        })
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "jenis_form",
-                                                        $event.target.multiple
-                                                          ? $$selectedVal
-                                                          : $$selectedVal[0]
-                                                      )
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "input" }
-                                                    },
-                                                    [_vm._v("input [text]")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "inputnumber"
-                                                      }
-                                                    },
-                                                    [_vm._v("input [number]")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "inputimage"
-                                                      }
-                                                    },
-                                                    [_vm._v("input [image]")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: { value: "select" }
-                                                    },
-                                                    [_vm._v("select")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "option",
-                                                    {
-                                                      attrs: {
-                                                        value: "datepicker"
-                                                      }
-                                                    },
-                                                    [_vm._v("datepicker")]
-                                                  )
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass: "col-md-12",
-                                            attrs: { align: "center" }
-                                          },
-                                          [
-                                            _c(
-                                              "h4",
-                                              { attrs: { align: "center" } },
-                                              [
-                                                _vm._v(
-                                                  "Validasi kolom " +
-                                                    _vm._s(i + 1)
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "required"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "required"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: [
-                                                  function($event) {
-                                                    var $$a =
-                                                        grup.kolom[i].rules,
-                                                      $$el = $event.target,
-                                                      $$c = $$el.checked
-                                                        ? true
-                                                        : false
-                                                    if (Array.isArray($$a)) {
-                                                      var $$v = "required",
-                                                        $$i = _vm._i($$a, $$v)
-                                                      if ($$el.checked) {
-                                                        $$i < 0 &&
-                                                          _vm.$set(
-                                                            grup.kolom[i],
-                                                            "rules",
-                                                            $$a.concat([$$v])
-                                                          )
-                                                      } else {
-                                                        $$i > -1 &&
-                                                          _vm.$set(
-                                                            grup.kolom[i],
-                                                            "rules",
-                                                            $$a
-                                                              .slice(0, $$i)
-                                                              .concat(
-                                                                $$a.slice(
-                                                                  $$i + 1
-                                                                )
-                                                              )
-                                                          )
-                                                      }
-                                                    } else {
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "rules",
-                                                        $$c
-                                                      )
-                                                    }
-                                                  },
-                                                  function($event) {
-                                                    return _vm.hapusNullable(
-                                                      grup.kolom[i]
-                                                    )
-                                                  }
-                                                ]
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " required\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "nullable"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "nullable"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: [
-                                                  function($event) {
-                                                    var $$a =
-                                                        grup.kolom[i].rules,
-                                                      $$el = $event.target,
-                                                      $$c = $$el.checked
-                                                        ? true
-                                                        : false
-                                                    if (Array.isArray($$a)) {
-                                                      var $$v = "nullable",
-                                                        $$i = _vm._i($$a, $$v)
-                                                      if ($$el.checked) {
-                                                        $$i < 0 &&
-                                                          _vm.$set(
-                                                            grup.kolom[i],
-                                                            "rules",
-                                                            $$a.concat([$$v])
-                                                          )
-                                                      } else {
-                                                        $$i > -1 &&
-                                                          _vm.$set(
-                                                            grup.kolom[i],
-                                                            "rules",
-                                                            $$a
-                                                              .slice(0, $$i)
-                                                              .concat(
-                                                                $$a.slice(
-                                                                  $$i + 1
-                                                                )
-                                                              )
-                                                          )
-                                                      }
-                                                    } else {
-                                                      _vm.$set(
-                                                        grup.kolom[i],
-                                                        "rules",
-                                                        $$c
-                                                      )
-                                                    }
-                                                  },
-                                                  function($event) {
-                                                    return _vm.hapusRequired(
-                                                      grup.kolom[i]
-                                                    )
-                                                  }
-                                                ]
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " nullable\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "email"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "email"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = "email",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " email\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "string"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "string"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = "string",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " string\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "numeric"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "numeric"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = "numeric",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " numeric\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "file"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "file"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = "file",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " file\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "mimes:jpeg,png"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "mimes:jpeg,png"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v = "mimes:jpeg,png",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " image\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "checkbox",
-                                                value: "date_format:Y-m-d"
-                                              },
-                                              domProps: {
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "date_format:Y-m-d"
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v =
-                                                        "date_format:Y-m-d",
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " date_format:Y-m-d\n                                    "
-                                            ),
-                                            _c("br"),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: { type: "checkbox" },
-                                              domProps: {
-                                                value:
-                                                  "unique:" +
-                                                  grup.kolom[i].tabel_kolom,
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "unique:" +
-                                                        grup.kolom[i]
-                                                          .tabel_kolom
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v =
-                                                        "unique:" +
-                                                        grup.kolom[i]
-                                                          .tabel_kolom,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " unique\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value:
-                                                    grup.kolom[i].tabel_kolom,
-                                                  expression:
-                                                    "grup.kolom[i].tabel_kolom"
-                                                }
-                                              ],
-                                              attrs: { type: "text" },
-                                              domProps: {
-                                                value: grup.kolom[i].tabel_kolom
-                                              },
-                                              on: {
-                                                keyup: function($event) {
-                                                  return _vm.perbaruiUnik(
-                                                    grup.kolom[i]
-                                                  )
-                                                },
-                                                change: function($event) {
-                                                  return _vm.perbaruiUnik(
-                                                    grup.kolom[i]
-                                                  )
-                                                },
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    grup.kolom[i],
-                                                    "tabel_kolom",
-                                                    $event.target.value
-                                                  )
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: { type: "checkbox" },
-                                              domProps: {
-                                                value:
-                                                  "exists:" +
-                                                  grup.kolom[i].tabel_kolom,
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "exists:" +
-                                                        grup.kolom[i]
-                                                          .tabel_kolom
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v =
-                                                        "exists:" +
-                                                        grup.kolom[i]
-                                                          .tabel_kolom,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " exists\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value:
-                                                    grup.kolom[i].tabel_kolom,
-                                                  expression:
-                                                    "grup.kolom[i].tabel_kolom"
-                                                }
-                                              ],
-                                              attrs: { type: "text" },
-                                              domProps: {
-                                                value: grup.kolom[i].tabel_kolom
-                                              },
-                                              on: {
-                                                keyup: function($event) {
-                                                  return _vm.perbaruiUnik(
-                                                    grup.kolom[i],
-                                                    false
-                                                  )
-                                                },
-                                                change: function($event) {
-                                                  return _vm.perbaruiUnik(
-                                                    grup.kolom[i],
-                                                    false
-                                                  )
-                                                },
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    grup.kolom[i],
-                                                    "tabel_kolom",
-                                                    $event.target.value
-                                                  )
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: { type: "checkbox" },
-                                              domProps: {
-                                                value:
-                                                  "min:" + grup.kolom[i].min,
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "min:" + grup.kolom[i].min
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v =
-                                                        "min:" +
-                                                        grup.kolom[i].min,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " min\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].min,
-                                                  expression:
-                                                    "grup.kolom[i].min"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "number",
-                                                min: "0"
-                                              },
-                                              domProps: {
-                                                value: grup.kolom[i].min
-                                              },
-                                              on: {
-                                                keydown: function($event) {
-                                                  return _vm.hapusmin(
-                                                    grup.kolom[i]
-                                                  )
-                                                },
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    grup.kolom[i],
-                                                    "min",
-                                                    $event.target.value
-                                                  )
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].rules,
-                                                  expression:
-                                                    "grup.kolom[i].rules"
-                                                }
-                                              ],
-                                              attrs: { type: "checkbox" },
-                                              domProps: {
-                                                value:
-                                                  "max:" + grup.kolom[i].max,
-                                                checked: Array.isArray(
-                                                  grup.kolom[i].rules
-                                                )
-                                                  ? _vm._i(
-                                                      grup.kolom[i].rules,
-                                                      "max:" + grup.kolom[i].max
-                                                    ) > -1
-                                                  : grup.kolom[i].rules
-                                              },
-                                              on: {
-                                                change: function($event) {
-                                                  var $$a = grup.kolom[i].rules,
-                                                    $$el = $event.target,
-                                                    $$c = $$el.checked
-                                                      ? true
-                                                      : false
-                                                  if (Array.isArray($$a)) {
-                                                    var $$v =
-                                                        "max:" +
-                                                        grup.kolom[i].max,
-                                                      $$i = _vm._i($$a, $$v)
-                                                    if ($$el.checked) {
-                                                      $$i < 0 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a.concat([$$v])
-                                                        )
-                                                    } else {
-                                                      $$i > -1 &&
-                                                        _vm.$set(
-                                                          grup.kolom[i],
-                                                          "rules",
-                                                          $$a
-                                                            .slice(0, $$i)
-                                                            .concat(
-                                                              $$a.slice($$i + 1)
-                                                            )
-                                                        )
-                                                    }
-                                                  } else {
-                                                    _vm.$set(
-                                                      grup.kolom[i],
-                                                      "rules",
-                                                      $$c
-                                                    )
-                                                  }
-                                                }
-                                              }
-                                            }),
-                                            _vm._v(
-                                              " max\n                                    "
-                                            ),
-                                            _c("input", {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: grup.kolom[i].max,
-                                                  expression:
-                                                    "grup.kolom[i].max"
-                                                }
-                                              ],
-                                              attrs: {
-                                                type: "number",
-                                                min: "0"
-                                              },
-                                              domProps: {
-                                                value: grup.kolom[i].max
-                                              },
-                                              on: {
-                                                keydown: function($event) {
-                                                  return _vm.hapusmax(
-                                                    grup.kolom[i]
-                                                  )
-                                                },
-                                                input: function($event) {
-                                                  if ($event.target.composing) {
-                                                    return
-                                                  }
-                                                  _vm.$set(
-                                                    grup.kolom[i],
-                                                    "max",
-                                                    $event.target.value
-                                                  )
-                                                }
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass: "col-md-12",
-                                            attrs: { align: "center" }
-                                          },
-                                          [
-                                            _c("br"),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-danger btn-sm",
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.preventDefault()
-                                                    return grup.kolom.splice(
-                                                      i,
-                                                      1
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [_vm._v("Hapus")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-success btn-sm",
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.preventDefault()
-                                                    return _vm.sisipkanKolom(
-                                                      i,
-                                                      grup.kolom
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [_vm._v("Sisipkan Kolom")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-primary btn-sm",
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.preventDefault()
-                                                    return _vm.sembunyikan(
-                                                      grup.kolom[i]
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [_vm._v("Sembunyikan")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "btn btn-info btn-sm",
-                                                on: {
-                                                  click: function($event) {
-                                                    $event.preventDefault()
-                                                    return _vm.salin(
-                                                      grup.kolom,
-                                                      grup.kolom[i]
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [_vm._v("Salin")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("hr")
-                                          ]
-                                        )
-                                      ]
-                                    : _vm._e()
-                                ]
-                          ],
-                          2
-                        )
+                        _c("kolom", {
+                          attrs: {
+                            tabel: _vm.tabel,
+                            kolom: kol,
+                            koloms: grup.kolom,
+                            indeks: i,
+                            "modul-lainnya": _vm.modulLainnya
+                          },
+                          on: {
+                            sembunyikan: _vm.sembunyikan,
+                            salin: _vm.salin,
+                            sisipkanKolom: _vm.sisipkanKolom
+                          }
+                        })
                       ]
                     }),
                     _vm._v(" "),
@@ -43971,6 +41964,1536 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { class: "row " + (_vm.indeks % 2 ? "bg-biru" : "bg-orange") },
+    [
+      _vm.kolom.sembunyikan
+        ? [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary btn-sm",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.perlihatkan(_vm.koloms[_vm.indeks])
+                    }
+                  }
+                },
+                [_vm._v("Perlihatkan")]
+              )
+            ])
+          ]
+        : [
+            _c("div", { staticClass: "col-sm-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Kolom " + _vm._s(_vm.indeks + 1) + " [view]")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.koloms[_vm.indeks].nama_asli,
+                      expression: "koloms[indeks].nama_asli"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.koloms[_vm.indeks].nama_asli },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.setNama(_vm.koloms[_vm.indeks])
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.koloms[_vm.indeks],
+                        "nama_asli",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Kolom " + _vm._s(_vm.indeks + 1) + " [basisdata]")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.koloms[_vm.indeks].nama,
+                      expression: "koloms[indeks].nama"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.koloms[_vm.indeks].nama },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.resetUniqueExists(_vm.koloms[_vm.indeks])
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.koloms[_vm.indeks],
+                        "nama",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "" } }, [
+                  _vm._v("Tipe " + _vm._s(_vm.indeks + 1))
+                ]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.koloms[_vm.indeks].tipe,
+                        expression: "koloms[indeks].tipe"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.koloms[_vm.indeks],
+                            "tipe",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        },
+                        function($event) {
+                          return _vm.onChangeTipe(_vm.koloms[_vm.indeks])
+                        }
+                      ]
+                    }
+                  },
+                  _vm._l(_vm.tipe, function(t) {
+                    return _c("option", { domProps: { value: t.value } }, [
+                      _vm._v(_vm._s(t.text))
+                    ])
+                  }),
+                  0
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _vm.isForeignType(_vm.koloms[_vm.indeks].tipe)
+              ? [
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Modul Parent")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].modul_parent,
+                              expression: "koloms[indeks].modul_parent"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "", id: "" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "modul_parent",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        _vm._l(_vm.modulLainnya, function(mm) {
+                          return _c("option", { domProps: { value: mm.id } }, [
+                            _vm._v(_vm._s(mm.nama))
+                          ])
+                        }),
+                        0
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Pilih Kolom Primary")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].kolom_parent,
+                              expression: "koloms[indeks].kolom_parent"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "", id: "" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "kolom_parent",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        _vm._l(
+                          _vm.kolomParent(
+                            _vm.modulLainnya,
+                            _vm.koloms[_vm.indeks].modul_parent
+                          ),
+                          function(km) {
+                            return _c(
+                              "option",
+                              { domProps: { value: km.nama } },
+                              [_vm._v(_vm._s(km.nama))]
+                            )
+                          }
+                        ),
+                        0
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Pilih Kolom View (Select)")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].kolom_view,
+                              expression: "koloms[indeks].kolom_view"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { name: "", id: "" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "kolom_view",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        _vm._l(
+                          _vm.kolomParent(
+                            _vm.modulLainnya,
+                            _vm.koloms[_vm.indeks].modul_parent
+                          ),
+                          function(km) {
+                            return _c(
+                              "option",
+                              { domProps: { value: km.nama } },
+                              [_vm._v(_vm._s(km.nama))]
+                            )
+                          }
+                        ),
+                        0
+                      )
+                    ])
+                  ])
+                ]
+              : _vm.bukanPrimary(_vm.koloms[_vm.indeks].tipe)
+              ? [
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Panjang " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].panjang,
+                            expression: "koloms[indeks].panjang"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number", min: "0" },
+                        domProps: { value: _vm.koloms[_vm.indeks].panjang },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "panjang",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.koloms[_vm.indeks].unique,
+                          expression: "koloms[indeks].unique"
+                        }
+                      ],
+                      staticClass: "mt-5",
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.koloms[_vm.indeks].unique)
+                          ? _vm._i(_vm.koloms[_vm.indeks].unique, null) > -1
+                          : _vm.koloms[_vm.indeks].unique
+                      },
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].unique,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "unique",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "unique",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "unique", $$c)
+                            }
+                          },
+                          function($event) {
+                            return _vm.isUnique(_vm.koloms[_vm.indeks])
+                          }
+                        ]
+                      }
+                    }),
+                    _vm._v(" Unique\n\t\t\t\t"),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.koloms[_vm.indeks].nullable,
+                          expression: "koloms[indeks].nullable"
+                        }
+                      ],
+                      staticClass: "mt-5",
+                      attrs: { type: "checkbox" },
+                      domProps: {
+                        checked: Array.isArray(_vm.koloms[_vm.indeks].nullable)
+                          ? _vm._i(_vm.koloms[_vm.indeks].nullable, null) > -1
+                          : _vm.koloms[_vm.indeks].nullable
+                      },
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].nullable,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "nullable",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "nullable",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "nullable", $$c)
+                            }
+                          },
+                          function($event) {
+                            return _vm.isNullable(_vm.koloms[_vm.indeks])
+                          }
+                        ]
+                      }
+                    }),
+                    _vm._v(" Nullable\n\t\t\t")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Faker " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].faker,
+                              expression: "koloms[indeks].faker"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "faker",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "name" } }, [
+                            _vm._v("name")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "nik" } }, [
+                            _vm._v("nik")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "email" } }, [
+                            _vm._v("email")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "city" } }, [
+                            _vm._v("city")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "phoneNumber" } }, [
+                            _vm._v("phoneNumber")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "digit" } }, [
+                            _vm._v("digit")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "jenisKelamin" } }, [
+                            _vm._v("jenisKelamin")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "option",
+                            { attrs: { value: "tanggalSekarang" } },
+                            [_vm._v("tanggalSekarang")]
+                          ),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "address" } }, [
+                            _vm._v("address")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Ikon " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].ikon,
+                            expression: "koloms[indeks].ikon"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.koloms[_vm.indeks].ikon },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "ikon",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Lebar Form " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].kolom_bootstrap,
+                              expression: "koloms[indeks].kolom_bootstrap"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "kolom_bootstrap",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _vm._l(12, function(i) {
+                            return _c(
+                              "option",
+                              { domProps: { value: "col-md-" + i } },
+                              [_vm._v(_vm._s("col-md-" + i))]
+                            )
+                          }),
+                          _vm._v(" "),
+                          _vm._l(12, function(i) {
+                            return _c(
+                              "option",
+                              { domProps: { value: "col-sm-" + i } },
+                              [_vm._v(_vm._s("col-sm-" + i))]
+                            )
+                          }),
+                          _vm._v(" "),
+                          _vm._l(12, function(i) {
+                            return _c(
+                              "option",
+                              { domProps: { value: "col-lg-" + i } },
+                              [_vm._v(_vm._s("col-lg-" + i))]
+                            )
+                          }),
+                          _vm._v(" "),
+                          _vm._l(12, function(i) {
+                            return _c(
+                              "option",
+                              { domProps: { value: "col-xs-" + i } },
+                              [_vm._v(_vm._s("col-xs-" + i))]
+                            )
+                          })
+                        ],
+                        2
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-2" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "" } }, [
+                        _vm._v("Jenis Form " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.koloms[_vm.indeks].jenis_form,
+                              expression: "koloms[indeks].jenis_form"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.koloms[_vm.indeks],
+                                "jenis_form",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "input" } }, [
+                            _vm._v("input [text]")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "inputnumber" } }, [
+                            _vm._v("input [number]")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "inputimage" } }, [
+                            _vm._v("input [image]")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "select" } }, [
+                            _vm._v("select")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "datepicker" } }, [
+                            _vm._v("datepicker")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-12", attrs: { align: "center" } },
+                    [
+                      _c("h4", { attrs: { align: "center" } }, [
+                        _vm._v("Validasi kolom " + _vm._s(_vm.indeks + 1))
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "required" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "required") >
+                              -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$a = _vm.koloms[_vm.indeks].rules,
+                                $$el = $event.target,
+                                $$c = $$el.checked ? true : false
+                              if (Array.isArray($$a)) {
+                                var $$v = "required",
+                                  $$i = _vm._i($$a, $$v)
+                                if ($$el.checked) {
+                                  $$i < 0 &&
+                                    _vm.$set(
+                                      _vm.koloms[_vm.indeks],
+                                      "rules",
+                                      $$a.concat([$$v])
+                                    )
+                                } else {
+                                  $$i > -1 &&
+                                    _vm.$set(
+                                      _vm.koloms[_vm.indeks],
+                                      "rules",
+                                      $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1))
+                                    )
+                                }
+                              } else {
+                                _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                              }
+                            },
+                            function($event) {
+                              return _vm.hapusNullable(_vm.koloms[_vm.indeks])
+                            }
+                          ]
+                        }
+                      }),
+                      _vm._v(" required\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "nullable" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "nullable") >
+                              -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$a = _vm.koloms[_vm.indeks].rules,
+                                $$el = $event.target,
+                                $$c = $$el.checked ? true : false
+                              if (Array.isArray($$a)) {
+                                var $$v = "nullable",
+                                  $$i = _vm._i($$a, $$v)
+                                if ($$el.checked) {
+                                  $$i < 0 &&
+                                    _vm.$set(
+                                      _vm.koloms[_vm.indeks],
+                                      "rules",
+                                      $$a.concat([$$v])
+                                    )
+                                } else {
+                                  $$i > -1 &&
+                                    _vm.$set(
+                                      _vm.koloms[_vm.indeks],
+                                      "rules",
+                                      $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1))
+                                    )
+                                }
+                              } else {
+                                _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                              }
+                            },
+                            function($event) {
+                              return _vm.hapusRequired(_vm.koloms[_vm.indeks])
+                            }
+                          ]
+                        }
+                      }),
+                      _vm._v(" nullable\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "email" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "email") > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "email",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" email\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "string" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "string") >
+                              -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "string",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" string\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "numeric" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "numeric") >
+                              -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "numeric",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" numeric\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "file" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(_vm.koloms[_vm.indeks].rules, "file") > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "file",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" file\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "mimes:jpeg,png" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "mimes:jpeg,png"
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "mimes:jpeg,png",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" image\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox", value: "date_format:Y-m-d" },
+                        domProps: {
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "date_format:Y-m-d"
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "date_format:Y-m-d",
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" date_format:Y-m-d\n\t\t\t\t"),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox" },
+                        domProps: {
+                          value: "unique:" + _vm.koloms[_vm.indeks].tabel_kolom,
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "unique:" + _vm.koloms[_vm.indeks].tabel_kolom
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v =
+                                  "unique:" +
+                                  _vm.koloms[_vm.indeks].tabel_kolom,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" unique\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].tabel_kolom,
+                            expression: "koloms[indeks].tabel_kolom"
+                          }
+                        ],
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.koloms[_vm.indeks].tabel_kolom },
+                        on: {
+                          keyup: function($event) {
+                            return _vm.perbaruiUnik(_vm.koloms[_vm.indeks])
+                          },
+                          change: function($event) {
+                            return _vm.perbaruiUnik(_vm.koloms[_vm.indeks])
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "tabel_kolom",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox" },
+                        domProps: {
+                          value: "exists:" + _vm.koloms[_vm.indeks].tabel_kolom,
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "exists:" + _vm.koloms[_vm.indeks].tabel_kolom
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v =
+                                  "exists:" +
+                                  _vm.koloms[_vm.indeks].tabel_kolom,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" exists\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].tabel_kolom,
+                            expression: "koloms[indeks].tabel_kolom"
+                          }
+                        ],
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.koloms[_vm.indeks].tabel_kolom },
+                        on: {
+                          keyup: function($event) {
+                            return _vm.perbaruiUnik(
+                              _vm.koloms[_vm.indeks],
+                              false
+                            )
+                          },
+                          change: function($event) {
+                            return _vm.perbaruiUnik(
+                              _vm.koloms[_vm.indeks],
+                              false
+                            )
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "tabel_kolom",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox" },
+                        domProps: {
+                          value: "min:" + _vm.koloms[_vm.indeks].min,
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "min:" + _vm.koloms[_vm.indeks].min
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "min:" + _vm.koloms[_vm.indeks].min,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" min\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].min,
+                            expression: "koloms[indeks].min"
+                          }
+                        ],
+                        attrs: { type: "number", min: "0" },
+                        domProps: { value: _vm.koloms[_vm.indeks].min },
+                        on: {
+                          keydown: function($event) {
+                            return _vm.hapusmin(_vm.koloms[_vm.indeks])
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "min",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].rules,
+                            expression: "koloms[indeks].rules"
+                          }
+                        ],
+                        attrs: { type: "checkbox" },
+                        domProps: {
+                          value: "max:" + _vm.koloms[_vm.indeks].max,
+                          checked: Array.isArray(_vm.koloms[_vm.indeks].rules)
+                            ? _vm._i(
+                                _vm.koloms[_vm.indeks].rules,
+                                "max:" + _vm.koloms[_vm.indeks].max
+                              ) > -1
+                            : _vm.koloms[_vm.indeks].rules
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.koloms[_vm.indeks].rules,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = "max:" + _vm.koloms[_vm.indeks].max,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.koloms[_vm.indeks],
+                                    "rules",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.koloms[_vm.indeks], "rules", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" max\n\t\t\t\t"),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.koloms[_vm.indeks].max,
+                            expression: "koloms[indeks].max"
+                          }
+                        ],
+                        attrs: { type: "number", min: "0" },
+                        domProps: { value: _vm.koloms[_vm.indeks].max },
+                        on: {
+                          keydown: function($event) {
+                            return _vm.hapusmax(_vm.koloms[_vm.indeks])
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.koloms[_vm.indeks],
+                              "max",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]
+                  )
+                ]
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-12", attrs: { align: "center" } },
+              [
+                _c("br"),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger btn-sm",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.koloms.splice(_vm.indeks, 1)
+                      }
+                    }
+                  },
+                  [_vm._v("Hapus")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success btn-sm",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.$emit("sisipkanKolom", [
+                          _vm.indeks,
+                          _vm.kolom
+                        ])
+                      }
+                    }
+                  },
+                  [_vm._v("Sisipkan Kolom")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary btn-sm",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.$emit("sembunyikan", _vm.koloms[_vm.indeks])
+                      }
+                    }
+                  },
+                  [_vm._v("Sembunyikan")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-info btn-sm",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.$emit("salin", [
+                          _vm.koloms,
+                          _vm.koloms[_vm.indeks]
+                        ])
+                      }
+                    }
+                  },
+                  [_vm._v("Salin")]
+                ),
+                _vm._v(" "),
+                _c("hr")
+              ]
+            )
+          ]
+    ],
+    2
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -56392,6 +55915,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Kolom.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Kolom.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Kolom.vue?vue&type=template&id=2b737dea& */ "./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea&");
+/* harmony import */ var _Kolom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Kolom.vue?vue&type=script&lang=js& */ "./resources/js/components/Kolom.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Kolom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Kolom.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Kolom.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Kolom.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kolom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Kolom.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Kolom.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kolom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Kolom.vue?vue&type=template&id=2b737dea& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Kolom.vue?vue&type=template&id=2b737dea&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kolom_vue_vue_type_template_id_2b737dea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Tipe.vue":
 /*!******************************************!*\
   !*** ./resources/js/components/Tipe.vue ***!
@@ -56460,8 +56052,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp7.3.9\htdocs\stisla-generator\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp7.3.9\htdocs\stisla-generator\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\stisla-generator\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\stisla-generator\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
