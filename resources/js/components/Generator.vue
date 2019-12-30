@@ -216,7 +216,7 @@
         </div>
         <template v-for="(grup, indexGrup) in data.grup">
             <div class="card mt-4">
-                <div class="card-header">{{ grup.nama }} 
+                <div class="card-header">{{ grup.nama }}
                     <div class="btn-group float-right">
                         <button class="btn btn-sm btn-success" @click.prevent="sisipkanGrup(indexGrup)">Sisipkan Grup</button>
                         <button class="btn btn-sm btn-warning" v-if="!grup.sembunyikan" @click.prevent="grup.sembunyikan = true">Sembunyikan</button>
@@ -284,8 +284,16 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="">Pilih Kolom Primary</label>
-                                            <select name="" id="" class="form-control">
-                                                <option v-for="km in kolomParent(modulLainnya, grup.kolom[i].modul_parent)" :value="km.id">{{ km.nama }}</option>
+                                            <select name="" id="" class="form-control" v-model="grup.kolom[i].kolom_parent">
+                                                <option v-for="km in kolomParent(modulLainnya, grup.kolom[i].modul_parent)" :value="km.nama">{{ km.nama }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="">Pilih Kolom View (Select)</label>
+                                            <select name="" id="" class="form-control" v-model="grup.kolom[i].kolom_view">
+                                                <option v-for="km in kolomParent(modulLainnya, grup.kolom[i].modul_parent)" :value="km.nama">{{ km.nama }}</option>
                                             </select>
                                         </div>
                                     </div>
@@ -405,7 +413,7 @@
                         <h4 align="center" class="mt-3">Copas ke web.php anda</h4>
                         <textarea class="form-control">Route::resource('{{ data.tabel }}', '{{ data.controller }}')->except('show');</textarea>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </div>

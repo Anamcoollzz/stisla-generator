@@ -2254,6 +2254,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 // import KolomBootstrapSelect from './KolomBootstrapSelect.vue'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40994,7 +41002,7 @@ var render = function() {
         return [
           _c("div", { staticClass: "card mt-4" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v(_vm._s(grup.nama) + " \n                "),
+              _vm._v(_vm._s(grup.nama) + "\n                "),
               _c("div", { staticClass: "btn-group float-right" }, [
                 _c(
                   "button",
@@ -41432,8 +41440,44 @@ var render = function() {
                                               _c(
                                                 "select",
                                                 {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        grup.kolom[i]
+                                                          .kolom_parent,
+                                                      expression:
+                                                        "grup.kolom[i].kolom_parent"
+                                                    }
+                                                  ],
                                                   staticClass: "form-control",
-                                                  attrs: { name: "", id: "" }
+                                                  attrs: { name: "", id: "" },
+                                                  on: {
+                                                    change: function($event) {
+                                                      var $$selectedVal = Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function(o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function(o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                      _vm.$set(
+                                                        grup.kolom[i],
+                                                        "kolom_parent",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    }
+                                                  }
                                                 },
                                                 _vm._l(
                                                   _vm.kolomParent(
@@ -41445,7 +41489,87 @@ var render = function() {
                                                       "option",
                                                       {
                                                         domProps: {
-                                                          value: km.id
+                                                          value: km.nama
+                                                        }
+                                                      },
+                                                      [_vm._v(_vm._s(km.nama))]
+                                                    )
+                                                  }
+                                                ),
+                                                0
+                                              )
+                                            ]
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col-md-3" }, [
+                                          _c(
+                                            "div",
+                                            { staticClass: "form-group" },
+                                            [
+                                              _c(
+                                                "label",
+                                                { attrs: { for: "" } },
+                                                [
+                                                  _vm._v(
+                                                    "Pilih Kolom View (Select)"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "select",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "model",
+                                                      rawName: "v-model",
+                                                      value:
+                                                        grup.kolom[i]
+                                                          .kolom_view,
+                                                      expression:
+                                                        "grup.kolom[i].kolom_view"
+                                                    }
+                                                  ],
+                                                  staticClass: "form-control",
+                                                  attrs: { name: "", id: "" },
+                                                  on: {
+                                                    change: function($event) {
+                                                      var $$selectedVal = Array.prototype.filter
+                                                        .call(
+                                                          $event.target.options,
+                                                          function(o) {
+                                                            return o.selected
+                                                          }
+                                                        )
+                                                        .map(function(o) {
+                                                          var val =
+                                                            "_value" in o
+                                                              ? o._value
+                                                              : o.value
+                                                          return val
+                                                        })
+                                                      _vm.$set(
+                                                        grup.kolom[i],
+                                                        "kolom_view",
+                                                        $event.target.multiple
+                                                          ? $$selectedVal
+                                                          : $$selectedVal[0]
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                _vm._l(
+                                                  _vm.kolomParent(
+                                                    _vm.modulLainnya,
+                                                    grup.kolom[i].modul_parent
+                                                  ),
+                                                  function(km) {
+                                                    return _c(
+                                                      "option",
+                                                      {
+                                                        domProps: {
+                                                          value: km.nama
                                                         }
                                                       },
                                                       [_vm._v(_vm._s(km.nama))]
@@ -56336,8 +56460,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\stisla-generator\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\stisla-generator\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp7.3.9\htdocs\stisla-generator\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp7.3.9\htdocs\stisla-generator\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -36,9 +36,11 @@ class HomeController extends Controller
     public function index(Modul $modul)
     {
         $modul->load(['projek', 'kolom'=>function($q){
-            $q->whereNull('grup_id');
+            $q->whereNull('grup_id')->distinct('nama');
         }, 'grup.kolom']);
-        $modul_lainnya = Modul::with('kolom')->where('id', '!=', $modul->id)->where('projek_id', $modul->projek_id)->get();
+        $modul_lainnya = Modul::with(['kolom'=>function($q){
+            $q->distinct('nama');
+        }])->where('id', '!=', $modul->id)->where('projek_id', $modul->projek_id)->get();
         // return $modul_lainnya;
         return view('home',['modul'=>$modul, 'active'=>'projek', 'modul_lainnya'=>$modul_lainnya]);
     }
@@ -65,46 +67,24 @@ class HomeController extends Controller
 
     private function simpanKonfigurasi($modul, $request)
     {
-        $modul->update([
-            'nama'              => $request->modul,
-            'ikon'              => $request->ikon,
-            'controller'        => $request->controller,
-            'model'             => $request->model,
-            'views'             => $request->views,
-            'tabel'             => $request->tabel,
-            'migration'         => $request->migration,
-            'seeder'            => $request->seeder,
-            'views'             => $request->views,
-        ]);
-        Kolom::where('modul_id', $modul->id)->delete();
-        Grup::where('modul_id', $modul->id)->delete();
-        foreach ($request->kolom as $kolom) {
-            Kolom::create([
-                'nama'              => $kolom['nama'],
-                'nama_asli'         => $kolom['nama_asli'],
-                'tipe'              => $kolom['tipe'],
-                'unik'              => $kolom['unique'],
-                'nullable'          => isset($kolom['nullable']) ? $kolom['nullable'] : null,
-                'rules'             => $kolom['rules'],
-                'kolom_bootstrap'   => $kolom['kolom_bootstrap'],
-                'min'               => isset($kolom['min']) ? $kolom['min'] : null,
-                'max'               => isset($kolom['max']) ? $kolom['max'] : null,
-                'sembunyikan'       => $kolom['sembunyikan'],
-                'faker'             => isset($kolom['faker']) ? $kolom['faker'] : '',
-                'ikon'              => isset($kolom['ikon']) ? $kolom['ikon'] : '',
-                'tabel_kolom'       => $kolom['tabel_kolom'],
-                'modul_id'          => $modul->id,
-                'jenis_form'        => $kolom['jenis_form'],
+        \DB::transaction(function() use ($modul, $request){
+            // memperbarui modul
+            $modul->update([
+                'nama'                  => $request->modul,
+                'ikon'                  => $request->ikon,
+                'controller'            => $request->controller,
+                'model'                 => $request->model,
+                'views'                 => $request->views,
+                'tabel'                 => $request->tabel,
+                'migration'             => $request->migration,
+                'seeder'                => $request->seeder,
+                'views'                 => $request->views,
+                'namespace_model'       => $request->namespace_model,
+                'namespace_controller'  => $request->namespace_controller,
             ]);
-        }
-        foreach ($request->grup as $grup) {
-            $g = Grup::create([
-                'nama'              => $grup['nama'],
-                'kolom_bootstrap'   => $grup['kolom_bootstrap'],
-                'sembunyikan'       => $grup['sembunyikan'],
-                'modul_id'          => $modul->id,
-            ]);
-            foreach ($grup['kolom'] as $kolom) {
+            Kolom::where('modul_id', $modul->id)->delete();
+            Grup::where('modul_id', $modul->id)->delete();
+            foreach ($request->kolom as $kolom) {
                 Kolom::create([
                     'nama'              => $kolom['nama'],
                     'nama_asli'         => $kolom['nama_asli'],
@@ -120,11 +100,48 @@ class HomeController extends Controller
                     'ikon'              => isset($kolom['ikon']) ? $kolom['ikon'] : '',
                     'tabel_kolom'       => $kolom['tabel_kolom'],
                     'modul_id'          => $modul->id,
-                    'grup_id'           => $g->id,
-                    'jenis_form'        => $kolom['jenis_form'],
+                    'jenis_form'        => isset($kolom['jenis_form']) ? $kolom['jenis_form'] : '',
+                    'modul_parent'      => $kolom['modul_parent'],
+                    'kolom_parent'      => $kolom['kolom_parent'],
+                    'kolom_view'        => $kolom['kolom_view'],
                 ]);
             }
-        }
+            foreach ($request->grup as $grup) {
+                $g = Grup::create([
+                    'nama'              => $grup['nama'],
+                    'kolom_bootstrap'   => $grup['kolom_bootstrap'],
+                    'sembunyikan'       => $grup['sembunyikan'],
+                    'modul_id'          => $modul->id,
+                ]);
+                foreach ($grup['kolom'] as $kolom) {
+                    Kolom::create([
+                        'nama'              => $kolom['nama'],
+                        'nama_asli'         => $kolom['nama_asli'],
+                        'tipe'              => $kolom['tipe'],
+                        'unik'              => $kolom['unique'],
+                        'nullable'          => isset($kolom['nullable']) ? $kolom['nullable'] : null,
+                        'rules'             => $kolom['rules'],
+                        'kolom_bootstrap'   => $kolom['kolom_bootstrap'],
+                        'min'               => isset($kolom['min']) ? $kolom['min'] : null,
+                        'max'               => isset($kolom['max']) ? $kolom['max'] : null,
+                        'sembunyikan'       => $kolom['sembunyikan'],
+                        'faker'             => isset($kolom['faker']) ? $kolom['faker'] : '',
+                        'ikon'              => isset($kolom['ikon']) ? $kolom['ikon'] : '',
+                        'tabel_kolom'       => $kolom['tabel_kolom'],
+                        'modul_id'          => $modul->id,
+                        'grup_id'           => $g->id,
+                        'jenis_form'        => isset($kolom['jenis_form']) ? $kolom['jenis_form'] : '',
+                        'modul_parent'      => $kolom['modul_parent'],
+                        'kolom_parent'      => $kolom['kolom_parent'],
+                        'kolom_view'        => $kolom['kolom_view'],
+                    ]);
+                }
+            }
+            // memperbarui projek
+            $modul->projek()->update([
+                'path'              => $request->path,
+            ]);
+        });
     }
 
     private function generateController($request)
@@ -292,7 +309,7 @@ class HomeController extends Controller
             $tambah_content = str_replace("IKON", '', $tambah_content);
         // penamaan modul
         $tambah_content = str_replace("NAMA_MODUL", $request->modul, $tambah_content);
-        $form = $this->setForm($request->kolom);
+        $form = $this->setForm($request->kolom, $request);
         $tambah_content = str_replace("FORM", $form, $tambah_content);
         $kolomCollection = collect($request->kolom);
         if(in_array('date', $kolomCollection->pluck('tipe')->toArray())){
@@ -308,7 +325,7 @@ class HomeController extends Controller
             $grup_lainnya .= "<h4>{$grup['nama']}</h4>\n";
             $grup_lainnya .= "</div>";
             $grup_lainnya .= "<div class=\"card-body\">";
-            $grup_lainnya .= $this->setForm($grup['kolom']);
+            $grup_lainnya .= $this->setForm($grup['kolom'], $request);
             $grup_lainnya .= "</div>\n";
             $grup_lainnya .= "</div>\n";
             $grup_lainnya .= "</div>\n";
@@ -320,13 +337,17 @@ class HomeController extends Controller
         fclose($tambah_file);
     }
 
-    private function setForm($arrayKolom)
+    private function setForm($arrayKolom, $request)
     {
         $form = '';
         foreach ($arrayKolom as $kolom) {
             if(!in_array($kolom['tipe'], $this->PRIMARY_TYPE)){
                 $form .= "\n<div class=\"{$kolom['kolom_bootstrap']}\">";
-                $no_required = !in_array('required', $kolom['rules']);
+                $rules = $kolom['rules'];
+                if(!is_array($rules)){
+                    $rules = [];
+                }
+                $no_required = !in_array('required', $rules);
                 if($no_required){
                     $no_required = 'true';
                 }else{
@@ -334,20 +355,31 @@ class HomeController extends Controller
                 }
                 // dd($no_required);
                 $ikon = isset($kolom['ikon']) ? $kolom['ikon'] : '';
-                $jenis_form = $kolom['jenis_form'];
+                $jenis_form = isset($kolom['jenis_form']) ? $kolom['jenis_form'] : '';
                 if($kolom['tipe'] == 'date')
                     $jenis_form = 'datepicker';
                 if($kolom['tipe'] == 'alamat')
                     $jenis_form = 'textarea';
                 if($kolom['tipe'] != 'jenisKelamin'){
+                    $foreignArray = [
+                        'bigIntegerForeign', 'integerForeign', 'tinyIntegerForeign',
+                    ];
                     if($jenis_form == 'inputnumber'){
                         $tambahan = '';
                         $tambahan .= $kolom['min'] ? "'min'=>".$kolom['min'] : '';
                         $tambahan .= $kolom['max'] ? "'max'=>".$kolom['min'] : '';
                         $form .= "\n@{$jenis_form}(['id'=>'{$kolom['nama']}', 'label'=>'{$kolom['nama_asli']}', 'ikon'=>'{$ikon}', 'value'=>isset(\$d)?\$d->{$kolom['nama']} : '', 'no_required'=>".$no_required.", {$tambahan}])";
-                    }
-                    else
+                    }else if(in_array($kolom['tipe'], $foreignArray)){
+                        $modulLainnya = Modul::find($kolom['modul_parent']);
+                        if($modulLainnya->namespace_model)
+                            $form .= "\n@php\n\$selectData = \App\\".$modulLainnya->namespace_model."\\".$modulLainnya->model;
+                        else
+                            $form .= "\n@php\n\$selectData = \App\\".$modulLainnya->model;
+                        $form .= "::all();\n\$selectData = \$selectData->pluck('{$kolom['kolom_view']}', '{$kolom['kolom_parent']}');\n@endphp";
+                        $form .= "\n@select(['id'=>'{$kolom['nama']}', 'label'=>'{$kolom['nama_asli']}', 'value'=>isset(\$d)?\$d->{$kolom['nama']} : '', 'no_required'=>".$no_required.", 'selectData'=>\$selectData])";
+                    }else{
                         $form .= "\n@{$jenis_form}(['id'=>'{$kolom['nama']}', 'label'=>'{$kolom['nama_asli']}', 'ikon'=>'{$ikon}', 'value'=>isset(\$d)?\$d->{$kolom['nama']} : '', 'no_required'=>".$no_required."])";
+                    }
                 }
                 else
                     $form .= "\n@select(['id'=>'{$kolom['nama']}', 'label'=>'{$kolom['nama_asli']}', 'selectData'=>['Laki-laki'=>'Laki-laki','Perempuan'=>'Perempuan',], 'value'=>isset(\$d)?\$d->{$kolom['nama']} : '', 'no_required'=>".$no_required."])";
@@ -463,7 +495,7 @@ class HomeController extends Controller
         fclose($seeder_file);
     }
 
-    private function dashesToCamelCase($string, $capitalizeFirstCharacter = true) 
+    private function dashesToCamelCase($string, $capitalizeFirstCharacter = true)
     {
 
         $str = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));

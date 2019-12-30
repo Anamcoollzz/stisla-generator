@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Modul extends Model
 {
     protected $table = 'modul';
-    protected $fillable = ['nama', 'projek_id', 'controller', 'model', 'views', 'migration', 'tabel', 'seeder', 'ikon'];
+    protected $fillable = ['nama', 'projek_id', 'controller', 'model', 'views', 'migration', 'tabel', 'seeder', 'ikon', 'namespace_model', 'namespace_controller'];
     public $timestamps = false;
     public function projek()
     {

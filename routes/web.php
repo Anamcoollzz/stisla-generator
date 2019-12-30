@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('home');
+    return redirect()->route('projek');
 });
 
 Route::post('/generate/{modul}', 'HomeController@generator');
